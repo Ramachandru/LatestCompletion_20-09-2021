@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="userId"
+            type="String" />
+
+        <variable
+            name="adapterIns"
+            type="com.ram.exerciseapp.UserIdAdapter" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->adapterIns.OnClicked(userId)}"
+            android:text="@{userId}"
+            android:textColor="#000000"
+            android:textSize="16sp"></TextView>
+    </LinearLayout>
+</layout>
